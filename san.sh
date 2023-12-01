@@ -18,8 +18,9 @@ clear
 wget https://raw.githubusercontent.com/Paper890/san/main/bot/kyt.zip
 unzip kyt.zip
 pip3 install -r kyt/requirements.txt
-clear
 
+clear
+clear
 #isi data
 echo ""
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
