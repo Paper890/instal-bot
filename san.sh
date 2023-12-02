@@ -19,8 +19,6 @@ wget https://raw.githubusercontent.com/Paper890/san/main/bot/kyt.zip
 unzip kyt.zip
 pip3 install -r kyt/requirements.txt
 
-clear
-clear
 #isi data
 echo ""
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -61,13 +59,12 @@ rm -rf kyt.sh
 echo "Done"
 echo "Your Data Bot"
 echo -e "==============================="
-echo "Token Bot         : $bottoken"
-echo "Admin          : $admin"
-echo "Domain        : $domain"
-echo "Pub            : $PUB"
-echo "Host           : $NS"
+echo -e "Token Bot         : $bottoken"
+echo -e  "Admin          : $admin"
+echo -e  "Domain        : $domain"
+echo -e  "Pub            : $PUB"
+echo -e  "Host           : $NS"
 echo -e "==============================="
-echo "Setting done"
-clear
-
+echo -e  "Setting done"
+echo -e ""
 echo " Installations complete, type /menu on your bot"
