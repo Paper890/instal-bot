@@ -18,18 +18,17 @@ clear
 wget https://raw.githubusercontent.com/Paper890/san/main/bot/kyt.zip
 unzip kyt.zip
 pip3 install -r kyt/requirements.txt
+clear
 
 #isi data
 echo ""
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " \e[1;97;101m          ADD BOT PANEL          \e[0m"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "${grenbo}Tutorial Creat Bot and ID Telegram${NC}"
-echo -e "${grenbo}[*] Creat Bot and Token Bot : @BotFather${NC}"
-echo -e "${grenbo}[*] Info Id Telegram : @MissRose_bot , perintah /info${NC}"
+echo -e "${grenbo}Please Input Your Bot Token and Telegram ID${NC}"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-read -e -p "[*] Input your Bot Token : " bottoken
-read -e -p "[*] Input Your Id Telegram :" admin
+read -e -p "[Bot Token]     : " bottoken
+read -e -p "[Telegram, ID]  : " admin
 echo -e BOT_TOKEN='"'$bottoken'"' >> /usr/bin/kyt/var.txt
 echo -e ADMIN='"'$admin'"' >> /usr/bin/kyt/var.txt
 echo -e DOMAIN='"'$domain'"' >> /usr/bin/kyt/var.txt
@@ -56,15 +55,13 @@ systemctl enable kyt
 systemctl restart kyt
 cd /root
 rm -rf kyt.sh
+clear
+
 echo "Done"
-echo "Your Data Bot"
-echo -e "==============================="
-echo -e "Token Bot         : $bottoken"
-echo -e  "Admin          : $admin"
-echo -e  "Domain        : $domain"
-echo -e  "Pub            : $PUB"
-echo -e  "Host           : $NS"
-echo -e "==============================="
-echo -e  "Setting done"
+echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "Token Bot  : $bottoken"
+echo -e  "Admin     : $admin"
+echo -e  "Domain    : $domain"
+echo -e " Installations complete, type /menu on your bot"
+echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
-echo " Installations complete, type /menu on your bot"
