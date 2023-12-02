@@ -23,7 +23,7 @@ clear
 #isi data
 echo ""
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " \e[1;97;101m          ADD BOT PANEL          \e[0m"
+echo -e "\e[1;97;101m             ADD BOT PANEL                \e[0m"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "${grenbo}Please Input Your Bot Token and Telegram ID${NC}"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -59,7 +59,7 @@ clear
 
 echo "Done"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Token Bot  : $bottoken"
+echo -e "Token Bot : $bottoken"
 echo -e  "Admin     : $admin"
 echo -e  "Domain    : $domain"
 echo -e " Installations complete, type /menu on your bot"
