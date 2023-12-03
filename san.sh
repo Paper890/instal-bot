@@ -5,7 +5,9 @@ domain=$(cat /etc/xray/domain)
 #color
 grenbo="\e[92;1m"
 NC='\e[0m'
-#install
+#IFORMASI
+echo "SEDANG MEMASANG BOT"
+#INSTALLBOT
 apt update && apt upgrade
 apt install python3 python3-pip git
 cd /usr/bin
@@ -18,6 +20,12 @@ clear
 wget https://raw.githubusercontent.com/Paper890/san/main/bot/kyt.zip
 unzip kyt.zip
 pip3 install -r kyt/requirements.txt
+echo -n "Proses: ["
+for i in {1..10}; do
+    echo -n "#"
+    sleep 1  # Atur durasi sesuai kebutuhan
+done
+echo "] Selesai!"
 clear
 
 #isi data
