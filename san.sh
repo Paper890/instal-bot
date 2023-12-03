@@ -7,7 +7,6 @@ grenbo="\e[92;1m"
 NC='\e[0m'
 #IFORMASI
 echo "SEDANG MEMASANG BOT"
-#INSTALLBOT
 apt update && apt upgrade
 apt install python3 python3-pip git
 cd /usr/bin
