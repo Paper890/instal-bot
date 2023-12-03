@@ -6,25 +6,47 @@ domain=$(cat /etc/xray/domain)
 grenbo="\e[92;1m"
 NC='\e[0m'
 #IFORMASI
-echo "SEDANG MEMASANG BOT"
-apt update && apt upgrade
-apt install python3 python3-pip git
-cd /usr/bin
-wget https://raw.githubusercontent.com/Paper890/san/main/bot/bot.zip
-unzip bot.zip
-mv bot/* /usr/bin
-chmod +x /usr/bin/*
-rm -rf bot.zip
-clear
-wget https://raw.githubusercontent.com/Paper890/san/main/bot/kyt.zip
-unzip kyt.zip
-pip3 install -r kyt/requirements.txt
-echo -n "Proses: ["
-for i in {1..10}; do
-    echo -n "#"
-    sleep 1  # Atur durasi sesuai kebutuhan
-done
-echo "] Selesai!"
+fun_bar() {
+    CMD[0]="$1"
+    CMD[1]="$2"
+    (
+        [[ -e $HOME/fim ]] && rm $HOME/fim
+        ${CMD[0]} -y >/dev/null 2>&1
+        ${CMD[1]} -y >/dev/null 2>&1
+        touch $HOME/fim
+    ) >/dev/null 2>&1 &
+    tput civis
+    echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
+    while true; do
+        for ((i = 0; i < 18; i++)); do
+            echo -ne "\033[0;32m#"
+            sleep 0.1s
+        done
+        [[ -e $HOME/fim ]] && rm $HOME/fim && break
+        echo -e "\033[0;33m]"
+        sleep 1s
+        tput cuu1
+        tput dl1
+        echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
+    done
+    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
+    tput cnorm
+}
+res1() {
+    apt update && apt upgrade
+    apt install python3 python3-pip git
+    cd /usr/bin
+    wget https://raw.githubusercontent.com/Paper890/san/main/bot/bot.zip
+    unzip bot.zip
+    mv bot/* /usr/bin
+    chmod +x /usr/bin/*
+    rm -rf bot.zip
+    clear
+    wget https://raw.githubusercontent.com/Paper890/san/main/bot/kyt.zip
+    unzip kyt.zip
+    pip3 install -r kyt/requirements.txt
+}
+netfilter-persistent
 clear
 
 #isi data
